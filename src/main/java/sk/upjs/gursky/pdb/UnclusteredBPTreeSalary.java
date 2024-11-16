@@ -36,7 +36,7 @@ public class UnclusteredBPTreeSalary extends BPTree<SalaryKey, SalaryOffsetEntry
 			buffer.clear();
 			channel.read(buffer, offset);
 			buffer.rewind();
-			int numberOfRecords = buffer.getInt(); // precita si 4 bajty z buffra, sipka sa tam prevynie
+			int numberOfRecords = buffer.getInt(); 
 			for (int i = 0; i < numberOfRecords; i++) {
 				PersonEntry entry = new PersonEntry();
 				entry.load(buffer);
